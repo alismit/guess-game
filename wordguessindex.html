@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Word suggestion app</title>
+    <style>
+    body{
+        margin: 0%;
+        padding: 0%;
+    }
+    #container{
+        display: fslex;
+        flex-direction: column;
+        height:calc(100vh);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #h{
+        font-size:3.5em;
+        font-weight: 900;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #guess{
+        height: 40px;
+        width: 180px;
+        border:hotpink;
+        border-radius: 25px;
+        padding: 3px;
+        text-align: center;
+        box-shadow: 1px 3px 4px rgb(66, 60, 60);
+    }
+    #click{
+        height: 40px;
+        width: 80px;
+        border-radius: 30px;
+        border: none;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #212121;
+        color: white;
+        cursor: pointer;
+    }
+    #click:hover{
+        background-color: white;
+        color: #212121;
+        transition: 1.5s;
+    }
+    #correct{
+        font-style: italic;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    </style>
+</head>
+<body>  
+       <div id="container">
+        <span id="h">A simple game</span>
+        <div>
+            <input type="text" name="randomword" id="guess" maxlength="3" placeholder="Enter your guessed word">
+            <button onclick="randomWord()" id="click" >Check</button>
+        </div>
+             
+            <p id="hint"><b>Hint: </b>The word is consist of 3 letters.</p>
+            <p id="correct" > </p>
+       </div>
+        
+    <script src="./suggestion.js"></script>
+</body>
+
+</html>
